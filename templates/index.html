@@ -1,0 +1,12 @@
+<!doctype html>
+<title>Profil Sistemi</title>
+<h1>Markalar</h1>
+<ul>
+{% for brand in brands %}
+  <li>{{ brand.name }}</li>
+{% endfor %}
+</ul>
+<form action="/import" method="post" enctype="multipart/form-data">
+  <p>Excel Fiyat Listesi: <input type="file" name="file"> <input type="submit" value="Yükle"></p>
+</form>
+<p><a href="/order">Sipariş Oluştur</a></p>
